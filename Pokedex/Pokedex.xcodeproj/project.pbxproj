@@ -13,6 +13,9 @@
 		C02EB1C128079937003337BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02EB1BF28079937003337BF /* Main.storyboard */; };
 		C02EB1C32807995A003337BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02EB1C22807995A003337BF /* Assets.xcassets */; };
 		C02EB1C62807995A003337BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02EB1C42807995A003337BF /* LaunchScreen.storyboard */; };
+		C02EB1D728079BB7003337BF /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EB1D628079BB7003337BF /* Api.swift */; };
+		C02EB1DB28079F9C003337BF /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EB1DA28079F9C003337BF /* ApiConstants.swift */; };
+		C02EB1DE2807A26B003337BF /* PokedexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EB1DD2807A26B003337BF /* PokedexViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C02EB1C22807995A003337BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02EB1C52807995A003337BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02EB1C72807995A003337BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02EB1D628079BB7003337BF /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		C02EB1DA28079F9C003337BF /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		C02EB1DD2807A26B003337BF /* PokedexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		C02EB1B828079936003337BF /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
-				C02EB1B928079936003337BF /* AppDelegate.swift */,
-				C02EB1BB28079936003337BF /* SceneDelegate.swift */,
+				C02EB1D528079B87003337BF /* Helpers&Utils */,
+				C02EB1D428079AF2003337BF /* Model */,
+				C02EB1D328079AE8003337BF /* ViewModel */,
+				C02EB1D128079ADC003337BF /* ViewControllers */,
+				C02EB1CE28079AB2003337BF /* SupportFiles */,
 				C02EB1BD28079936003337BF /* ViewController.swift */,
 				C02EB1BF28079937003337BF /* Main.storyboard */,
 				C02EB1C22807995A003337BF /* Assets.xcassets */,
-				C02EB1C42807995A003337BF /* LaunchScreen.storyboard */,
 				C02EB1C72807995A003337BF /* Info.plist */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		C02EB1CE28079AB2003337BF /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C02EB1B928079936003337BF /* AppDelegate.swift */,
+				C02EB1BB28079936003337BF /* SceneDelegate.swift */,
+				C02EB1C42807995A003337BF /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		C02EB1D128079ADC003337BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C02EB1D328079AE8003337BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C02EB1DD2807A26B003337BF /* PokedexViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C02EB1D428079AF2003337BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C02EB1D528079B87003337BF /* Helpers&Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C02EB1D628079BB7003337BF /* Api.swift */,
+				C02EB1DA28079F9C003337BF /* ApiConstants.swift */,
+			);
+			path = "Helpers&Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +188,9 @@
 			files = (
 				C02EB1BE28079936003337BF /* ViewController.swift in Sources */,
 				C02EB1BA28079936003337BF /* AppDelegate.swift in Sources */,
+				C02EB1DB28079F9C003337BF /* ApiConstants.swift in Sources */,
+				C02EB1DE2807A26B003337BF /* PokedexViewModel.swift in Sources */,
+				C02EB1D728079BB7003337BF /* Api.swift in Sources */,
 				C02EB1BC28079936003337BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
