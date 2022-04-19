@@ -19,7 +19,7 @@ class Api {
         var endPoint: String {
             switch self {
             case .pokemonApi:
-                return ""
+                return "api/v2/pokemon?"
             }
         }
     }
@@ -32,25 +32,6 @@ class Api {
     
     enum ContentType: String {
         case json = ""
-    }
-    
-    enum CodeResponse: Int {
-        case success = 200
-        case bad_request = 400
-        case error_server = 500
-        case timeout = -1002
-        case not_conection = -1001
-        
-        var message: String {
-            switch self {
-            case .success:
-                return "Exitoso"
-            case .bad_request, .error_server:
-                return "Servicio no disponible"
-            default:
-                return "Error interno"
-            }
-        }
     }
     
     static func makeURLRequest(endpoint: EndPoints, method: Method = .GET, parameters: [String:Any]? = nil, contentType: ContentType = .json) -> URLRequest {
@@ -93,5 +74,24 @@ class Api {
                 return
             }
         }.resume()
+    }
+}
+
+enum CodeResponse: Int {
+    case success = 200
+    case bad_request = 400
+    case error_server = 500
+    case timeout = -1002
+    case not_conection = -1001
+    
+    var message: String {
+        switch self {
+        case .success:
+            return "Exitoso"
+        case .bad_request, .error_server:
+            return "Servicio no disponible"
+        default:
+            return "Error interno"
+        }
     }
 }

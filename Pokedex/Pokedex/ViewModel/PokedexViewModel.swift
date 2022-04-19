@@ -8,15 +8,24 @@
 import Foundation
 
 class PokedexViewModel {
+    public var statusCode = Observable(CodeResponse.success)
+    public var pokedex = Observable([Pokemons]())
+    private var offset: Int = 0
+    private var limit: Int = 10
+    
     public func getCode() {
-        let response = Api.makeURLRequest(endpoint: .pokemonApi)
+        let params = ["limit":limit, "offset":offset]
+        let request = Api.makeURLRequest(endpoint: .pokemonApi,parameters: params)
         
-        Api.request(url: response) { (data, code) in
+        Api.request(url: request) { (data, code) in
             if code != .success {
                 print("Code: ",code)
+                self.statusCode.value = code
             }
-            
-            print("Data: ",data)
+                        
+            guard let response: PokedexResponse = data?.decodeData(), let data = response.results else { return }
+            self.pokedex.value = data
+            print("items: ",self.pokedex.value.count)
         }
     }
 }
