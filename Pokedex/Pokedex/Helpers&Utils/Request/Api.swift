@@ -44,7 +44,7 @@ class Api {
         urlRequest.httpMethod = method.rawValue
         let content = contentType.rawValue
         urlRequest.setValue(content, forHTTPHeaderField: "Content-Type")
-        urlRequest.timeoutInterval = 30
+        urlRequest.timeoutInterval = timeout
         if let params = parameters {
             if method == .GET {
                 let jsonString = params.reduce("") { "\($0)\($1.0)=\($1.1)&" }.dropLast()
